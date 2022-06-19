@@ -1,21 +1,22 @@
-var myname = "Qurban";
-var arr = [];
-var arr1 = [];
-var arr2 = [6, 4, "2"];
-var arr3 = [];
-arr3.push(5);
-arr3.push("Qurban");
-// function f(): [number, string] {
-//   return [25, "abc"];
-// }
-// const c = f();
-function logPerson(ad, soyad, yas) {
-    console.log({ ad: ad, soyad: soyad, yas: yas });
-}
-logPerson("Qurban", "Qurbanzade", 28);
-function yaz(ad, tekrar) {
-    for (var i = 0; i < tekrar; i++) {
-        console.log(ad);
-    }
-}
-yaz("Qurban", 3);
+"use strict";
+// Giriş
+//------------------------------------------
+// let myname: String | number = "Qurban";
+exports.__esModule = true;
+var obj = {
+    ad: "Qurban",
+    yas: 28
+};
+var myColor = "green";
+var colorArr = ["blue", "green", "red"];
+var colorArr1 = [
+    "blue",
+    "green",
+    "red",
+    "magenta",
+];
+var colorArr2 = ["blue", "yellow"];
+var user = { cins: "Doberman", ad: "Rex", yas: 2, soyad: "Mex" };
+var myMap = new Map();
+myMap.set("qurban", "abc");
+console.log(myMap);
