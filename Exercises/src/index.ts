@@ -3,6 +3,7 @@
 // let myname: String | number = "Qurban";
 
 import { type } from "os";
+import { performance } from "perf_hooks";
 
 // let arr = [] as string[];
 // let arr1: (number | string)[] = [];
@@ -32,33 +33,42 @@ import { type } from "os";
 
 // Tip Adlandırma
 //------------------------------------------
-type Person = { ad?: string; soyad?: string; yas: number };
-const obj: Person = {
-  ad: "Qurban",
-  yas: 28,
-};
 
-type Colors = "blue" | "red" | "green";
-type customColors = "syan" | "magenta" | "yellow";
-type allColors = Colors | customColors;
-const myColor: Colors = "green";
-const colorArr: Colors[] = ["blue", "green", "red"];
-const colorArr1: (Colors | customColors)[] = [
-  "blue",
-  "green",
-  "red",
-  "magenta",
-];
-const colorArr2: allColors[] = ["blue", "yellow"];
+// type Person = { ad?: string; soyad?: string; yas: number };
+// const obj: Person = {
+//   ad: "Qurban",
+//   yas: 28,
+// };
 
-type Person1 = { ad: string; soyad: string; yas: number };
-type Dog = { ad: string; cins: string; yas: number };
+// type Colors = "blue" | "red" | "green";
+// type customColors = "syan" | "magenta" | "yellow";
+// type allColors = Colors | customColors;
+// const myColor: Colors = "green";
+// const colorArr: Colors[] = ["blue", "green", "red"];
+// const colorArr1: (Colors | customColors)[] = [
+//   "blue",
+//   "green",
+//   "red",
+//   "magenta",
+// ];
+// const colorArr2: allColors[] = ["blue", "yellow"];
 
-type PersonDog = Person1 & Dog;
-const user: PersonDog = { cins: "Doberman", ad: "Rex", yas: 2, soyad: "Mex" };
+// type Person1 = { ad: string; soyad: string; yas: number };
+// type Dog = { ad: string; cins: string; yas: number };
 
-const myMap = new Map();
+// type PersonDog = Person1 & Dog;
+// const user: PersonDog = { cins: "Doberman", ad: "Rex", yas: 2, soyad: "Mex" };
 
-myMap.set("qurban", "abc");
+// const myMap = new Map();
 
-console.log(myMap);
+// myMap.set("qurban", "abc");
+
+// console.log(myMap);
+
+// Modullar
+//------------------------------------------
+
+import Person, { Student } from "./person";
+
+console.log(Person.ad);
+console.log({ ad: "Qurban", sinif: 11 } as Student);
